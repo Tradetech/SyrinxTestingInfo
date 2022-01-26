@@ -46,7 +46,7 @@ For specific __readonly__ or __tsc__ user-class behavior include a __USER_CLASS_
 - [ ] Quotes by user
 - [ ] Profile approval report
 
-### Account Profile - Edit 
+### Account Profile - Edit
 
 #### View/Edit Corporation
 
@@ -127,7 +127,7 @@ For specific __readonly__ or __tsc__ user-class behavior include a __USER_CLASS_
 - [ ] Search by rate type (FCL / LCL)
 - [ ] Search by each field, matching results in flyout
 - [ ] filter table headers at top of flyout table filter the results.
-- [ ] clicking expansion icon in table opens read-only form detailing container load 
+- [ ] clicking expansion icon in table opens read-only form detailing container load
   - [ ] Click Expire Alert --  alerts "Expiration Warning has been sent"
 - [ ] Click File -- rate gets a value in Tariff Number
 
@@ -366,7 +366,7 @@ For specific __readonly__ or __tsc__ user-class behavior include a __USER_CLASS_
 - [ ] Click invoice number in results table; invoice is opened in dialog window
 
 ### Trade Cash - Reports - Other Report Type
-- [ ] Global Margin; result is a table of summaries by house bill; 
+- [ ] Global Margin; result is a table of summaries by house bill;
   - [ ] Click expansion icon in second column of a result record; table of vouchers shown
   - [ ] mouseover Add & View in File Audit Notes; popover is shown.
   - [ ] in File Audit Notes Add popover, type a note and click Save; note can be seen in View when results are refreshed.
@@ -399,10 +399,65 @@ For specific __readonly__ or __tsc__ user-class behavior include a __USER_CLASS_
 ### Trade Cash - Setup - Chart of Accounts
 - Search by Center; cannot find any center with search results on dev
 
-## Read-Only User Class 
+## Read-Only User Class
 
 NEEDS info
 
-## TSC User Class 
+## TSC User Class
+- [ ] Can log in as ...TSC user
+- [ ] Have a change qualifier autocomplete
+- [ ] Verify Change qualifier works
+  - Change qualifier to DEMO
+  - Search for house bill MORGAN (MORGAN2022 will show up)
+  - Change qualifier to MOSJ (Multi-Modal)
+  - Search for house bill MORGAN, MORGAN2022 will not show up, but MorganMOSJ2022 will
 
-NEEDS info
+## BCO User Class
+- [ ] Login as EbookingBCO_MCLO:zNQ5n8tmfk has feature EBOOKINGUSER
+- Profiles View Only
+- No Accounting, No Trade Rates, No Consolidation
+- [ ] Create Shipment
+  - [ ] Real Customer is autofilled in (KONOIKE VINATRANS LOG...(Customer))[does not autofill consignment parties..]
+  - [ ] Essentials Wizard hidden fields:
+  - [ ] Essentials Wizard Not editable fields: MBL#, Carrier Booking#
+  - [ ] No Security Filing Selections in Compliance Wizard
+  - [ ] Route Wizard
+    - add connection
+    - Route locations are: Mizushima Japan -> Kobe -> LAX
+    - Trade Lane TPEB
+    - Service AWB
+  - [ ] Admin Workflow is Read Only
+  - [ ] Consignment Profiles(Shipper, etc.) are limited to seeing their corporation companies/locations, linked accounts, vendors, Agents, or offices.
+    - BCOCOMPANYVIS/BCOCORPORATEVIS
+    - [ ] Can see Mitsubishi Corp(Office), Hing Tai Hong(Agent), Sterling Transportation(Vendor), Kind Bars(Linked Customer), Silver Sparrow(Linked Customer)
+    - [ ] Can not see PREBOOK MMC(Not linked Customer)
+  - [ ] Shipper autocomplete and select King Bars San Fran
+  - [ ] Consignee autocomplete and select Silver Sparrow Huston, then
+    - replace Address Line 1: 8657 West Front Rd #400
+    - remove Address line 2
+  - [ ] Notify manually type in:
+    - Sterling Transportation
+    - 5353 W IMPERIAL HWY #300
+    - autocomplete Los Angeles
+    - zip code is: 90045
+  - Actions(Actions Panel on right) - Action tab
+    - [ ] Click Make E-booking
+      - [ ] Button changes
+        - color changed from Green to Grey
+        - text says E-Booking Made
+        - Completed Date = today
+        - Name = Morgan BCO User
+        - Log green triangle now shows and toggles open with entry of Button Clicked and timestamp
+      - [ ] Opened Form window (all that works)
+    - [ ] Can not click Acknowledge E-Booking, Confirm E-Booking
+    - [ ] Can not see Make Carrier E-Booking, Receive Carrier Confirmation
+  - [ ] Fields Locked, No save button, Lock symbol
+  - [ ] Once NVO has confirmed the booking, finish clicking the actions to confirm back
+
+## NVO User Class
+- [ ] Open shipment created by BCO user
+- [ ] Shipper should be Validated
+- [ ] Consignee and Notify should be unvalidated
+  - Validate Consignee and Notify
+- [ ] Go to Actions Action tab and click through the actions
+- [ ] Finish creating shipment booked by BCO
