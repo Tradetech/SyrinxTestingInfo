@@ -460,4 +460,9 @@ NEEDS info
 - [ ] Consignee and Notify should be unvalidated
   - Validate Consignee and Notify
 - [ ] Go to Actions Action tab and click through the actions
+  - [ ] Create Manual Carrier Ebooking
+    - Go to Actions Action tab and click "Make Carrier E-Booking"/"Carrier E-Booking Made", it will popup a modal window
+    - Click Send Email
+    - Click Receive Carrier Booking
+    - Confirm an editable line shows
 - [ ] Finish creating shipment booked by BCO
